@@ -1,0 +1,22 @@
+{
+  "name": "hue-iot",
+  "version": "1.0.0",
+  "description": "This is just a fun little repo with some scripts to control my brother's Hue lights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LudwigThePig/Hue-Lights.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LudwigThePig/Hue-Lights/issues"
+  },
+  "homepage": "https://github.com/LudwigThePig/Hue-Lights#readme",
+  "dependencies": {
+    "node-hue-api": "^3.4.3"
+  }
+}
