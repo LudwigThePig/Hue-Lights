@@ -31,6 +31,31 @@ class HueCommands {
     const result = await this.api.lights.setLightState(light, state);
     console.log(result ? `Intensity set to ${intensity}` : 'Error: Failed to change intensity');
   }
+
+  hue = async (light = trash, color = 65535) => {
+    const state = new LightState()
+      .hue(color);
+    
+    const result = await this.api.lights.setLightState(light, state);
+    console.log(result ? `Hue set to ${color}` : 'Error: Failed to change intensity');
+  }
+
+  CIE = async (light = trash, x = 0, y = 0) => {
+    const state = new LightState()
+      .xy(x, y);
+    
+    const result = await this.api.lights.setLightState(light, state);
+    console.log(result ? `Hue set to x-${x}, y-${y} ` : 'Error: Failed to change intensity');
+  }
+
+  color = async (light, hue, saturation, luminance) => {
+    const state = new LightState()
+      .hsl(hue, saturation, luminance);
+    
+    const result = await this.api.lights.setLightState(light, state);
+    console.log(result ? `Hue set to hue-${hue}, saturation-${saturation} luminance-${luminance} ` : 'Error: Failed to change intensity');
+
+  }
 }
 
 module.exports = {
